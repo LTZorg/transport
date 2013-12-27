@@ -32,4 +32,16 @@ describe "Static pages" do
 
 	  end
 
+	  it "должна содержать правильные ссылки" do
+	  	visit root_path
+	  	click_link "Заявки на перевозки"
+	  	should have_content('Добро пожаловать')
+	  	click_link "Заявки"
+	  	should have_content('Добро пожаловать')
+	  	click_link "Справка"
+	  	should have_content('Справка')
+	  	click_link "Контакты"
+	  	should have_content('Контакты')
+	  end	
+
 end
