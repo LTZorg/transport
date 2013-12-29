@@ -14,6 +14,7 @@ end
 group :test do
   gem 'selenium-webdriver', '~> 2.39.0' #драйвер Selenium(автоматизация тестирования веб-приложения в реальном браузере) для Capybara
   gem 'capybara', '~> 2.2.0' #Тестирование через имитацию взаимодействия
+  gem 'factory_girl_rails', '~>4.2.1' #Фабрики
 end
 
 gem 'sass-rails', '~> 4.0.1' #Язык стилей Sass

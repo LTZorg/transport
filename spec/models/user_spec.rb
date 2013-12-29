@@ -95,4 +95,14 @@ describe User do
       specify { expect(user_for_invalid_password).to be_false }
     end
   end
+
+  describe "почта с разным регистром" do
+    let(:mixed_case_email) { "sdjhJJhjshdJ@JJid.coM" }
+
+    it "должна быть сохранена в нижнем регистре" do
+      @user.email = mixed_case_email
+      @user.save
+      expect(@user.reload.email).to eq mixed_case_email.downcase
+    end
+  end
 end
