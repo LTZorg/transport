@@ -3,16 +3,16 @@
 
 <div class="row">
   <div class="col-md-6 col-md-push-3">
-    <%= form_for(:session, url: sessions_path) do |f| %>
+    <%= form_tag sessions_path do %>
 
       
-      <%= f.label :email, "Электронная почта" %>
-      <%= f.text_field :email %>
+      <%= label_tag :email, "Электронная почта" %>
+      <%= text_field_tag :email, params[:email] %>
       
-      <%= f.label :password, "Пароль" %>
-      <%= f.password_field :password %>
+      <%= label_tag :password, "Пароль" %>
+      <%= password_field_tag :password %>
       
-      <%= f.submit "Вход", class: "btn btn-lg btn-danger" %>
+      <%= submit_tag "Вход", class: "btn btn-lg btn-danger" %>
     <% end %>
   </div>
 </div>

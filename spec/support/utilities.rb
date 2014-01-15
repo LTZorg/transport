@@ -12,10 +12,10 @@ RSpec::Matchers.define :have_error_message do |message|
   match do |page|
     expect(page).to have_selector('div.alert.alert-danger', text: message)
   end
+end
 
-  def valid_signin(user)
+def valid_signin(user)
     fill_in "Электронная почта",    with: user.email
     fill_in "Пароль", with: user.password.upcase
     click_button "Вход"
   end
-end
