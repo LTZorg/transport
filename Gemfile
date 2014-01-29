@@ -3,8 +3,13 @@ ruby '2.0.0'
 
 
 gem 'rails', '4.0.2' #Сам Rails
-gem 'bootstrap-sass', '~> 3.0.3.0' #Bootstrap Twitter
+gem 'bootstrap-sass', '~> 3.0.3.0' #Bootstrap Twitter 
 gem 'bcrypt-ruby', '~> 3.1.2' #Шифрование пароля
+gem 'faker', '~>1.2.0' #Создание манекенов-пользователей
+
+#Пагинация
+gem 'will_paginate', '~>3.0.5'
+gem 'bootstrap-will_paginate', '~>0.0.10'
 
 group :development, :test do
   gem 'sqlite3', '~> 1.3.8' #БД
